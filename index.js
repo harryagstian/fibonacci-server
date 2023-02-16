@@ -15,7 +15,7 @@ const dumbSort = () => {
 }
 
 app.get('/binus', function (req, res) {
-  console.log("traffic")
+  console.log(`${new Date()} traffic`)
 
   res.send(
     {
