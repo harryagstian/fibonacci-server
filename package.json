@@ -1,0 +1,23 @@
+{
+  "name": "fibonacci-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harryagstian/fibonacci-server.git"
+  },
+  "author": "harryagstian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harryagstian/fibonacci-server/issues"
+  },
+  "homepage": "https://github.com/harryagstian/fibonacci-server#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
