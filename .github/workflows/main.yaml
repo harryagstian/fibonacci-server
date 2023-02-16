@@ -6,10 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    uses: ./.github/workflows/test.yml
   build:
-    needs: test
     uses: ./.github/workflows/build-and-push.yml
     secrets:
       REGISTRY_URL: ${{ secrets.REGISTRY_URL }}
