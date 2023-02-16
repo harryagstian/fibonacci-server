@@ -1,0 +1,20 @@
+name: Build and Push docker image
+
+on:
+  workflow_call:
+    secrets:
+      REGISTRY_URL:
+        required: true
+
+jobs:
+  build:
+    runs-on: self-hosted
+    env:
+      IMAGE_TAG: ${{ secrets.REGISTRY_URL }}/test-server:latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build Docker image
+      run: docker build --tag ${{ env.IMAGE_TAG }} .
+      # not sure if this is a safe way, seems like there's vulnerability regarding commit message since it can be substituted with command
+    - name: Push Docker image
+      run: docker push ${{ env.IMAGE_TAG }}
