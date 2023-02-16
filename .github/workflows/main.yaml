@@ -7,6 +7,6 @@ on:
 
 jobs:
   build:
-    uses: ./.github/workflows/build-and-push.yml
+    uses: ./.github/workflows/build-and-push.yaml
     secrets:
       REGISTRY_URL: ${{ secrets.REGISTRY_URL }}
