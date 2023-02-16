@@ -3,7 +3,7 @@ name: Build and Push docker image
 on:
   workflow_call:
     secrets:
-      REGISTRY_URL:
+      DOCKERHUB_TOKEN:
         required: true
 
 jobs:
