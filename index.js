@@ -9,7 +9,7 @@ const getRandomInt = () => {
 const dumbSort = () => {
   let arrayLength = process.env.ARRAY_LENGTH || 10000000
   let arr = Array.from({ length: arrayLength }, () => getRandomInt())
-  arr.sort()
+  // arr.sort()
 
   return arr.length
 }
