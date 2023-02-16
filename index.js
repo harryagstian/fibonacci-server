@@ -14,7 +14,7 @@ const dumbSort = () => {
   return arr.length
 }
 
-app.get('/', function (req, res) {
+app.get('/binus', function (req, res) {
   console.log("traffic")
 
   res.send(
