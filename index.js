@@ -6,20 +6,19 @@ const getRandomInt = () => {
   return Math.floor(Math.random() * max);
 }
 
-const dumbSort = () => {
+const generateArray = () => {
   let arrayLength = process.env.ARRAY_LENGTH || 10000000
   let arr = Array.from({ length: arrayLength }, () => getRandomInt())
-  // arr.sort()
 
-  return arr.length
+  return arr
 }
 
-app.get('/binus', function (req, res) {
-  console.log(`${new Date()} traffic`)
+app.get('/test-endpoint', function (req, res) {
+  console.log(`${new Date()} Generating array`)
 
   res.send(
     {
-      length: dumbSort(),
+      data: generateArray(),
       date: new Date()
     }
   )
