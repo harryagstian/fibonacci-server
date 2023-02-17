@@ -10,7 +10,8 @@ const generateArray = () => {
   let arrayLength = process.env.ARRAY_LENGTH || 10000000
   let arr = Array.from({ length: arrayLength }, () => getRandomInt())
 
-  return arr
+  // return last value in array
+  return arr[arr.length - 1]
 }
 
 app.get('/test-endpoint', function (req, res) {
